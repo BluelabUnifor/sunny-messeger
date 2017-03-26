@@ -1,0 +1,140 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+	font-family: 'KG Ray of Sunshine';
+	src: url('KGRayofSunshine.eot');
+	src: url('KGRayofSunshine.eot?#iefix') format('embedded-opentype'),
+		url('KGRayofSunshine.woff') format('woff'),
+		url('KGRayofSunshine.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.espaco-top{
+    padding-top: 40%;
+}
+.dia{
+    background: #fcf8c5 !important;
+}
+.noite{
+    background: #344c6a !important;
+}
+.graus{
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+}
+
+.umidade{
+    height: 50px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 27px;
+    color: #fff;
+}
+.fonte-cor{
+    color: #b38b1c;
+    font-size: 24px;
+}
+.fonte-padrao{
+    font-family: 'KG Ray of Sunshine' !important;
+}
+}
+.fonte-caracteres{
+    font-family: 'helvetica';
+}
+.fonte-caracteres-top{
+    font-family: 'helvetica';
+    position: relative;
+    top: -3px;
+}
+.padding-simbolo{
+    padding-left: 15px;
+}
+.texto-center{
+    text-align: center;
+}
+.padding-top{
+    position: relative;
+    top:-5px;
+}
+.texto-left{
+    text-align: right;
+}
+.fonte-cor-sobre{
+    font-family: 'KG Ray of Sunshine';
+    color: #b38b1c !important;
+    font-size: 25px !important;
+}
+.btn-cancel-modal{
+    font-size: 15px !important;
+    color: #b38b1c;
+    margin: 10px;
+}
+.texto-sobre{
+
+    text-align: justify;
+    font-family: 'helvetica';
+    color: #787878;
+    font-size: 18px;
+
+}
+.padding-top-sobre{
+    padding-top: 50px !important;
+}
+.icon-voltar{
+
+    font-size: 35px !important;
+    color: #b38b1c !important;
+    position: relative;
+    top:5px;
+    right: -7px;
+}
+/*.altura{
+    height: 312px !important;
+}*/
+.posicao-balao{
+    padding-top: 50%;
+}
+.dia-simbolo{
+    background: url('../img/simbolo-sol-dia.png'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.noite-simbolo-dormindo{
+    background: url('../img/simbolo-sol-noite.gif'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+}
+.dia-simbolo-falando{
+    background: url('../img/simbolo-sol-falando.gif'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;,
+}
+.dia-simbolo-falando-noite{
+    background: url('../img/simbolo-sol-falando-noite.gif'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;,
+}
+.fade {
+   opacity: 0;
+   transition: opacity 3s ease-in-out;
+   -moz-transition: opacity 3s ease-in-out;
+   -webkit-transition: opacity 3s ease-in-out;
+}
+.fadeout{
+    opacity: 1;
+}
+.dia-simbolo-dormindo{
+    background: url('../img/simbolo-sol-dia-animacao-dormindo.gif'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.direita{
+    padding-right: 30px;
+}

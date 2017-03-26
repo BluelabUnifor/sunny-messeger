@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="starter">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Converse com o watson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/dialog.css">
+    <link rel="stylesheet" href="../css/sunny.css">
+    <link rel="stylesheet" href="../css/watson.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet"> -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ion-md-input/css/ion-md-input.min.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="InicioCtrl" id="fundo" class="container row bootstrap snippet">
+
+
+    <section class="sunny col-lg-10">
+        <center>
+            <div style="width:45%; padding-top: 5%;">
+                <div class="row">
+                    <div class="col col-33">
+
+                        <div class="col" id="sobre">
+                            <h3 class="fonte-cor fonte-padrao" ng-click="modalSobre()">Sobre</h3>
+                        </div>
+
+                    </div>
+                    <div class="col col-67">
+                        <div class="row">
+                            <div class="col col-20"><img id="icon-user" class="full-image" src="img/icon-user-dia.png" /></div>
+                            <div class="col">
+                                <h3 id="pessoas" class="fonte-cor fonte-padrao padding-top direita"></h3>
+                            </div>
+                            <div class="col"><img id="icon-porta" class="full-image" /></div>
+                            <div class="col"><img id="icon-luz" class="full-image" /></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col col-50 col-offset-50">
+                        <h3 id="temperatura" class="fonte-cor texto-left"></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="simbolos" class="">
+                        <div id="icon-balao" class="posicao-balao fadeout"><img class="full-image" src="/" /></div>
+                    </div>
+
+                    <div class="col col-20"><img id="icon-termo" class="full-image" src="/" /></div>
+                </div>
+            </div>
+        </center>
+
+    </section>
+    <!-- <ion-content> -->
+    <section class="watson col-lg-5">
+        <div id='animation' class='animated bounceInRight'>
+            <!-- <div class="container bootstrap snippet"> -->
+            <div class="tile tile-alt" id="messages-main">
+                <div class="ms-body limit-overflow" id="scroll-fixed">
+                    <div class="action-header clearfix">
+                    </div>
+                </div>
+                <div class="msb-reply">
+                    <textarea id="input" onkeypress="handle(event)" placeholder="converse com o watson"></textarea>
+                    <button onclick="enviarMensagem()"><i class="fa fa-paper-plane-o"></i></button>
+                    <div id="input-mic-holder" class="mic">
+                        <img id="input-mic" src="img/microphone-desligado.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="audio"> Your browser does not support the audio element.</audio>
+        </div>
+        <!-- </div> -->
+        <div id="view-change-button" onclick="button_animation()">
+            <img id="flatButton" src="img/chatButton.png">
+        </div>
+    </section>
+    <!-- </ion-content> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/dialog/scroll.js"></script>
+    <script src="js/dialog/textToSpeech.js"></script>
+    <script src="js/dialog/conversation.js"></script>
+    <script src="js/dialog/blundleMicrofone.js"></script>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <script src="lib/ion-md-input/js/ion-md-input.min.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/sunny/cordova.js"></script>
+
+    <!-- your app's js -->
+    <script type="/Sunny/text/javascript"></script>
+
+    <script src="js/sunny/app.js"></script>
+    <script src="js/sunny/controllers.js"></script>
+    <script src="js/sunny/services.js"></script>
+
+</body>
+
+</html>
