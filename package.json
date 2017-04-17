@@ -9,6 +9,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
     "prompt-sync": "^4.1.4",
+    "request": "^2.81.0",
     "watson-developer-cloud": "^2.15.5",
     "watson-speech": "^0.31.0"
   },
