@@ -27,49 +27,60 @@
 </head>
 
 <body ng-controller="InicioCtrl" id="fundo" class="container row bootstrap snippet">
-
-
-    <section class="sunny col-lg-10">
+  <div class="row">
+    <section class="sunny col-lg-7 col-sm-7">
         <center>
-            <div style="width:45%; padding-top: 5%;">
-                <div class="row">
-                    <div class="col col-33">
+            <div style="padding-top: 23%;">
 
-                        <div class="col" id="sobre">
+              <div class="sunny col-lg-7 col-sm-7 col-sm-offset-2 scale">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div id="sobre">
                             <h3 class="fonte-cor fonte-padrao" ng-click="modalSobre()">Sobre</h3>
                         </div>
-
                     </div>
-                    <div class="col col-67">
-                        <div class="row">
-                            <div class="col col-20"><img id="icon-user" class="full-image" src="img/icon-user-dia.png" /></div>
-                            <div class="col">
-                                <h3 id="pessoas" class="fonte-cor fonte-padrao padding-top direita"></h3>
-                            </div>
-                            <div class="col"><img id="icon-porta" class="full-image" /></div>
-                            <div class="col"><img id="icon-luz" class="full-image" /></div>
+                    <div class="col-sm-7">
+                      <div class="icones-header">
+                        <span>
+                          <img id="icon-user" class="full-image" src="img/icon-user-dia.png" />
+                        </span>
+                        <span>
+                          <h3 id="pessoas" class="fonte-cor fonte-padrao padding-top direita"></h3>
+                        </span>
+                        <span>
+                          <img id="icon-porta" class="full-image" />
+                        </span>
+                      </div>
+
+                      </div>
+
+                            <!--
+                            <img id="icon-porta" class="full-image" />
+                            <img id="icon-luz" class="full-image" /> -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-50 col-offset-50">
+                            <h3 id="temperatura" class="fonte-cor texto-left"></h3>
                         </div>
                     </div>
+                    <div class="row">
+                        <div id="simbolos" class="">
+                            <div id="icon-balao" class="posicao-balao fadeout"><img class="full-image" src="/" /></div>
+                        </div>
 
-                </div>
-                <div class="row">
-                    <div class="col col-50 col-offset-50">
-                        <h3 id="temperatura" class="fonte-cor texto-left"></h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="simbolos" class="">
-                        <div id="icon-balao" class="posicao-balao fadeout"><img class="full-image" src="/" /></div>
+                        <div class="col col-20"><img id="icon-termo" class="full-image" src="/" /></div>
                     </div>
 
-                    <div class="col col-20"><img id="icon-termo" class="full-image" src="/" /></div>
                 </div>
-            </div>
+
+
+
         </center>
-
     </section>
+
     <!-- <ion-content> -->
-    <section class="watson col-lg-5">
+    <section class="watson col-lg-5 col-sm-5 col-md-5">
         <div id='animation' class='animated bounceInRight'>
             <!-- <div class="container bootstrap snippet"> -->
             <div class="tile tile-alt" id="messages-main">
@@ -93,6 +104,12 @@
         </div>
     </section>
     <!-- </ion-content> -->
+
+
+  </div>
+
+
+
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

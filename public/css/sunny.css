@@ -138,3 +138,15 @@
 .direita{
     padding-right: 30px;
 }
+.icones-header{
+	display: inline;
+}
+.icones-header span{
+	width: 25%;
+	display: block;
+	float: left;
+  padding-left: 5px;
+}
+.scale{
+	transform: scale(1.4);
+}
