@@ -1,6 +1,6 @@
 var http = new XMLHttpRequest();
 var texto = document.getElementById("input");
-
+var speech = 'poxa';
 //teste
 var isShow = true;
 
@@ -12,21 +12,21 @@ jsonStringify = JSON.stringify(iniciar);
 
 send(jsonStringify);
 
-http.onreadystatechange = function() {
-    if (http.readyState == XMLHttpRequest.DONE) {
-        var obj = JSON.parse(http.responseText);
-        var speech = "";
-        obj.forEach(function(element) {
-            $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
-            speech += element + " ";
-        }, this);
-
-        scroll();
-        //para o watson falar pode ser encontrado no textToSpeech
-        sendTextToSpeech(speech);
-        //alert(http.responseText);
-    }
-}
+// http.onreadystatechange = function() {
+//     if (http.readyState == XMLHttpRequest.DONE) {
+//         var obj = JSON.parse(http.responseText);
+//         speech = "";
+//         obj.forEach(function(element) {
+//             $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+//             speech += element + " ";
+//         }, this);
+//
+//         scroll();
+//         //para o watson falar pode ser encontrado no textToSpeech
+//         sendTextToSpeech(speech);
+//         //alert(http.responseText);
+//     }
+// }
 
 function enviarMensagem() {
 
@@ -50,8 +50,26 @@ function enviarMensagem() {
 function handle(e) {
     if (e.keyCode === 13) {
         enviarMensagem();
+
+        http.onreadystatechange = function() {
+            if (http.readyState == XMLHttpRequest.DONE) {
+                var obj = JSON.parse(http.responseText);
+                speech = "";
+                obj.forEach(function(element) {
+                    $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+                    speech += element + " ";
+                }, this);
+
+                scroll();
+                //para o watson falar pode ser encontrado no textToSpeech
+                sendTextToSpeech(speech);
+                //alert(http.responseText);
+            }
+        }
+
+
         if (event.preventDefault) event.preventDefault();
-        return false; // evita a da espaco no input
+        return false; // evita da espaco no input
     }
 }
 
