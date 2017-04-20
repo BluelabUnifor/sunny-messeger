@@ -1,0 +1,16 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: sunny
+  host: conversationsunny
+  disk_quota: 1024M
+  services:
+  - Conversation-h3
+  - availability-monitoring-auto
+  - Speech To Text-b1
+  - Text to Speech-g9
+  env:
+    NPM_CONFIG_PRODUCTION: false
+  command: npm start
