@@ -52,9 +52,6 @@ function handle(e) {
         enviarMensagem();
 
         var audio = document.getElementById('audio');
-        var url = '/api/synthesize?voice=pt-BR_IsabelaVoice&text=' + "a google é muito ruim comigo, na bad";
-        audio.src = url;
-        audio.play();
 
         http.onreadystatechange = function() {
             if (http.readyState == XMLHttpRequest.DONE) {
@@ -69,6 +66,11 @@ function handle(e) {
                 //para o watson falar pode ser encontrado no textToSpeech
                 // sendTextToSpeech(speech);
                 //alert(http.responseText);
+
+                var audio = document.getElementById('audio');
+                var url = '/api/synthesize?voice=pt-BR_IsabelaVoice&text=' + conversation;
+                audio.src = url;
+                audio.play();
             }
         }
 
