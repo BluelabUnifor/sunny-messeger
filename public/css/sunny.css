@@ -152,6 +152,10 @@
 	transform: scale(1.4);
 }
 
+#primeiraDiv{
+	margin-top: 60px;
+}
+
 .paddingTop{
 	padding-top: 30%;
 }
