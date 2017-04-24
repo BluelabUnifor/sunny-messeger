@@ -4575,7 +4575,7 @@ function speechToText() {
 
                   stream.stop();
                   stream.removeAllListeners();
-                  input_mic.attr("src", 'image/microphone-desligado.png');
+                  input_mic.attr("src", 'img/microphone-desligado.png');
                   isLigado = false;
                   //speechToText();
 
@@ -4583,7 +4583,7 @@ function speechToText() {
 
                 } else {
                   console.log('buxo');
-                  input_mic.attr("src", 'image/microphone-desligado.png');
+                  input_mic.attr("src", 'img/microphone-desligado.png');
                 }
 
               }
@@ -4592,7 +4592,7 @@ function speechToText() {
           .catch(function(err) {
             console.log(err);
             console.log('fim da transmissão');
-            input_mic.attr("src", 'image/microphone-desligado.png');
+            input_mic.attr("src", 'img/microphone-desligado.png');
 
           });
 
