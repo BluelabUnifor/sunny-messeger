@@ -59,6 +59,7 @@
 }
 .texto-left{
     text-align: right;
+
 }
 .fonte-cor-sobre{
     font-family: 'KG Ray of Sunshine';
@@ -149,4 +150,8 @@
 }
 .scale{
 	transform: scale(1.4);
+}
+
+#primeiraDiv{
+	margin-top: 40px;
 }

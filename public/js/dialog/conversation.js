@@ -42,17 +42,17 @@ function enviarMensagem() {
 
         send(jsonStringify);
 
-                var obj = JSON.parse(http.responseText);
-                speech = "";
-                obj.forEach(function(element) {
-                    $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
-                    speech += element + " ";
-                }, this);
+        var obj = JSON.parse(http.responseText);
+        speech = "";
+        obj.forEach(function(element) {
+            $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+            speech += element + " ";
+        }, this);
 
-                scroll();
-                //para o watson falar pode ser encontrado no textToSpeech
-                // sendTextToSpeech(speech);
-                //alert(http.responseText);
+        scroll();
+        //para o watson falar pode ser encontrado no textToSpeech
+        // sendTextToSpeech(speech);
+        //alert(http.responseText);
 
 
     } else {

@@ -2,7 +2,7 @@ function tarefaSomar(){
     var d = new Date();
     var n = d.getHours();
 
-    console.log("HORA DO GET"+n);
+    //console.log("HORA DO GET"+n);
 
     if(n < 18){
         self.postMessage({tipo:'horarioRetorno',resultado:n.toString()});
@@ -37,7 +37,7 @@ function tarefaSomar(){
         if (xmlhttpluz.readyState == 4 && xmlhttpluz.status == 200) {
             var data = JSON.parse(xmlhttpluz.responseText);
             self.postMessage({tipo:'luzRetorno',resultado:data.state});
-            console.log("Luz "+data.state);
+            //console.log("Luz "+data.state);
         }
     };
     xmlhttpluz.open("GET", urlluz, true);
@@ -53,7 +53,7 @@ function tarefaSomar(){
         if (xmlhttpporta.readyState == 4 && xmlhttpporta.status == 200) {
             var data = JSON.parse(xmlhttpporta.responseText);
             self.postMessage({tipo:'portaRetorno',resultado:data.state});
-            console.log(data.state);
+            //console.log(data.state);
         }
     };
     xmlhttpporta.open("GET", urlporta, true);
@@ -70,7 +70,7 @@ function changeImage(temperatura){
             }
             else if(temperatura <= 20){
                 self.postMessage({tipo:'tempRetorno',resultado:temperatura.toString()});
-                console.log("ENTROU AQUI");
+                //console.log("ENTROU AQUI");
             }
             else if(temperatura <= 30){
                 self.postMessage({tipo:'tempRetorno',resultado:temperatura.toString()});

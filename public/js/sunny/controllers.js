@@ -86,12 +86,12 @@ angular.module('starter.controllers', [])
                         if (horario < 18) {
                             $("#icon-luz").attr("src", "img/icon-luz-aberta-dia.png");
                             luz++;
-                            console.log(luz);
+                            //console.log(luz);
 
                         } else {
                             $("#icon-luz").attr("src", "img/icon-luz-aberta-noite.png");
                             luz++;
-                            console.log(luz);
+                            //console.log(luz);
                         }
                     } else {
                         if (horario < 18) {
