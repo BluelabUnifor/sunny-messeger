@@ -1,7 +1,6 @@
 var http = new XMLHttpRequest();
 var texto = document.getElementById("input");
-var speech = 'poxa';
-//teste
+var speech = 'teste';
 var isShow = true;
 
 var iniciar = {
@@ -42,19 +41,7 @@ function enviarMensagem() {
         console.log(jsonStringify);
 
         send(jsonStringify);
-    } else {
-        alert("é nescessario escrever alguma coisa para iniciar uma conversa com o watson")
-    }
-}
 
-function handle(e) {
-    if (e.keyCode === 13) {
-        enviarMensagem();
-
-        var audio = document.getElementById('audio');
-
-        http.onreadystatechange = function() {
-            if (http.readyState == XMLHttpRequest.DONE) {
                 var obj = JSON.parse(http.responseText);
                 speech = "";
                 obj.forEach(function(element) {
@@ -67,13 +54,17 @@ function handle(e) {
                 // sendTextToSpeech(speech);
                 //alert(http.responseText);
 
-                var audio = document.getElementById('audio');
-                var url = '/api/synthesize?voice=pt-BR_IsabelaVoice&text=' + "conversation é muito minha praia";
-                audio.src = url;
-                audio.play();
-            }
-        }
 
+    } else {
+        alert("é nescessario escrever alguma coisa para iniciar uma conversa com o watson")
+    }
+}
+
+function handle(e) {
+
+    if (e.keyCode === 13) {
+        enviarMensagem();
+        sendTextToSpeech(speech);
 
         if (event.preventDefault) event.preventDefault();
         return false; // evita da espaco no input
@@ -82,7 +73,7 @@ function handle(e) {
 
 function send(json) {
 
-    http.open('POST', '/api/message', true);
+    http.open('POST', '/api/message', false);
     http.setRequestHeader('Content-type', 'application/json');
     http.send(json);
 
