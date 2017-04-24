@@ -152,6 +152,6 @@
 	transform: scale(1.4);
 }
 
-#primeiraDiv{
-	margin-top: 100px;
+.paddingTop{
+	padding-top: 30%;
 }
