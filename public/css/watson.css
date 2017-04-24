@@ -231,4 +231,5 @@
 
 .watson #messages-main .ms-body {
     overflow-y: auto;
+    padding-top: 30%;
 }
