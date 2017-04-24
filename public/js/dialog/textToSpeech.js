@@ -11,15 +11,15 @@ function sendTextToSpeech(conversation) {
     audio.onloadedmetadata = function() {
         isPlay = true;
         if (isNight) {
-            $("#simbolos").attr("class", "col col-75 padding-simbolo dia-simbolo-falando-noite");
+            $("#simbolos").attr("class", "col col-60 padding-simbolo dia-simbolo-falando-noite");
         } else {
-            $("#simbolos").attr("class", "col col-75 padding-simbolo dia-simbolo-falando");
+            $("#simbolos").attr("class", "col col-60 padding-simbolo dia-simbolo-falando");
         }
     }
 
     $("#audio").bind("ended", function() {
         isPlay = false;
-        $("#simbolos").attr("class", "col col-75 padding-simbolo dia-simbolo");
+        $("#simbolos").attr("class", "col col-60 padding-simbolo dia-simbolo");
     });
 
 }
