@@ -233,6 +233,10 @@
     overflow-y: auto;
 }
 
+.primeiraDiv{
+	margin-top: 100px;
+}
+
 .paddingTop{
 	padding-top: 30%;
 }
