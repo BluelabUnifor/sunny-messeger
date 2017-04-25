@@ -11,7 +11,7 @@
     height: 3.125rem;
     border-radius: 1.5625rem;
     background: #03a9f4;
-    top: 3.3000rem;
+    top: 10.0000rem;
     right: 0.9000rem;
     line-height: 3.125rem;
     vertical-align: middle;
@@ -238,4 +238,5 @@
 .paddingTop{
 	margin-top: 75px;
 	padding-top: 30%;
+	margin-bottom: 20px;
 }
