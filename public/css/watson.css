@@ -11,7 +11,7 @@
     height: 3.125rem;
     border-radius: 1.5625rem;
     background: #03a9f4;
-    top: 5.4125rem;
+    top: 3.3000rem;
     right: 0.9000rem;
     line-height: 3.125rem;
     vertical-align: middle;
@@ -233,11 +233,9 @@
     overflow-y: auto;
 }
 
-.primeiraDiv{
-	margin-top: 85px;
-}
+
 
 .paddingTop{
-	padding-top: 50%;
-	padding-bottom: 30%;
+	margin-top: 75px;
+	padding-top: 30%;
 }
