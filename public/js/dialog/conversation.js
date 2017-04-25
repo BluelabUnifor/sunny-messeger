@@ -3,13 +3,13 @@ var texto = document.getElementById("input");
 var speech = 'teste';
 var isShow = true;
 
-var iniciar = {
-    input: 'comecar_conversar'
-}
+// var iniciar = {
+  //  input: 'comecar_conversar'
+// }
 
-jsonStringify = JSON.stringify(iniciar);
+// jsonStringify = JSON.stringify(iniciar);
 
-send(jsonStringify);
+// send(jsonStringify);
 
 // http.onreadystatechange = function() {
 //     if (http.readyState == XMLHttpRequest.DONE) {
@@ -42,12 +42,12 @@ function enviarMensagem() {
 
         send(jsonStringify);
 
-        var obj = JSON.parse(http.responseText);
-        speech = "";
-        obj.forEach(function(element) {
-            $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
-            speech += element + " ";
-        }, this);
+        //var obj = JSON.parse(http.responseText);
+        //speech = "";
+        //obj.forEach(function(element) {
+        //    $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+        //    speech += element + " ";
+        //}, this);
 
         scroll();
         //para o watson falar pode ser encontrado no textToSpeech
@@ -64,7 +64,6 @@ function handle(e) {
 
     if (e.keyCode === 13) {
         enviarMensagem();
-        sendTextToSpeech(speech);
 
         if (event.preventDefault) event.preventDefault();
         return false; // evita da espaco no input
@@ -79,12 +78,24 @@ function send(json) {
 
     obj = JSON.parse(json);
 
-    if (obj.input != 'comecar_conversar') {
-        $(".ms-body").append('<div class="message-feed right"><div class="pull-right"><img src="img/user.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + obj.input + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
-        scroll();
-        texto.value = '';
-    }
+    $(".ms-body").append('<div class="message-feed right"><div class="pull-right"><img src="img/user.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + obj.input + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+    scroll();
+    texto.value = '';
+    
+    conversation_response();
+    
+    sendTextToSpeech(speech);
 
+}
+
+function conversation_response(){
+  var obj = JSON.parse(http.responseText);
+  speech = "";
+  obj.forEach(function(element) {
+     $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + element + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+     speech += element + " ";
+  }, this);
+  
 }
 
 function button_animation() {

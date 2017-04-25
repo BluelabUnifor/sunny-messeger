@@ -1,5 +1,5 @@
 var Conversation = require('watson-developer-cloud/conversation/v1');
-
+var context_value = {};
 // Set up Conversation service.
 var conversation = new Conversation({
     username: '3cdf0aee-2e6b-4854-956b-a996a910eb36',
@@ -16,16 +16,12 @@ module.exports = function(app) {
 
         input_value = req.body.input;
 
-        if (input_value !== 'comecar_conversar') {
             var mensagem = {
                 input: {
                     text: input_value
                 },
                 context: context_value
             };
-        } else {
-            var mensagem = {}
-        }
 
         // console.log(mensagem);
         // Start conversation with empty message.
